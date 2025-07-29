@@ -123,7 +123,9 @@ function main() {
         console.log(`${YELLOW}Your commit contains new services/libs with configuration issues:${RESET}\n`);
         allWarnings.forEach(warning => console.log(`- ${warning}\n`));
         console.log(`${YELLOW}=============================================================${RESET}`);
-        console.log('These are warnings and will not block your commit.\n');
+        // console.log('These are warnings and will not block your commit.\n');
+        console.log(`\n${RED}Commit ABORTED.${RESET} Please fix the issues above and try again.`);
+        process.exit(1);
     } else {
         console.log('✅ All checks passed.');
     }
