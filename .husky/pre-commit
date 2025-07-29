@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Ì¥ç Running pre-commit hook..."
+node .githooks/validate-new-service.js

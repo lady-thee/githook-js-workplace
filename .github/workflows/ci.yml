@@ -1,0 +1,13 @@
+# .github/workflows/ci.yml
+name: CI
+on:
+  pull_request:
+    paths:
+      - 'services/existing-service/**'
+      # A new service's path will be missing from here!
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build and Test
+        run: echo "Running tests..."
